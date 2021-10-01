@@ -1,6 +1,3 @@
-
-
-%matplotlib inline
 import numpy as np 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -72,3 +69,8 @@ def MovingAverageCrossStrategy(stock_symbol = 'ULTRACEMCO.NS', start_date = '201
     stock_df['Close Price'].plot(color = 'k', lw = 1, label = 'Close Price')  
     stock_df[short_window_col].plot(color = 'b', lw = 1, label = short_window_col)
     stock_df[long_window_col].plot(color = 'g', lw = 1, label = long_window_col) 
+
+      # plot 'buy' signals
+    plt.plot(stock_df[stock_df['Position'] == 1].index, 
+            stock_df[short_window_col][stock_df['Position'] == 1], 
+            '^', markersize = 15, color = 'g', alpha = 0.7, label = 'buy')
