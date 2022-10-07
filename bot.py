@@ -37,16 +37,7 @@ def MovingAverageCrossStrategy(stock_symbol = 'ULTRACEMCO.NS', start_date = '201
     if moving_avg == 'SMA':
         # Create a short simple moving average column
         stock_df[short_window_col] = stock_df['Close Price'].rolling(window = short_window, min_periods = 1).mean()
-
-        # Create a long simple moving average column
-        stock_df[long_window_col] = stock_df['Close Price'].rolling(window = long_window, min_periods = 1).mean()
-
-    elif moving_avg == 'EMA':
-        # Create short exponential moving average column
-        stock_df[short_window_col] = stock_df['Close Price'].ewm(span = short_window, adjust = False).mean()
-
-        # Create a long exponential moving average column
-        stock_df[long_window_col] = stock_df['Close Price'].ewm(span = long_window, adjust = False).mean()
+mean()
 
     # create a new column 'Signal' such that if faster moving average is greater than slower moving average 
     # then set Signal as 1 else 0.
