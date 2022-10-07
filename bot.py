@@ -81,7 +81,5 @@ def MovingAverageCrossStrategy(stock_symbol = 'ULTRACEMCO.NS', start_date = '201
             'v', markersize = 15, color = 'r', alpha = 0.7, label = 'sell')
     plt.ylabel('Price in ₹', fontsize = 16 )
     plt.xlabel('Date', fontsize = 16 )
-    plt.title(str(stock_symbol) + ' - ' + str(moving_avg) + ' Crossover', fontsize = 20)
-    plt.legend()
     plt.grid()
     plt.show()
