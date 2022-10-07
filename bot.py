@@ -70,7 +70,4 @@ mean()
     plt.plot(stock_df[stock_df['Position'] == -1].index, 
             stock_df[short_window_col][stock_df['Position'] == -1], 
             'v', markersize = 15, color = 'r', alpha = 0.7, label = 'sell')
-    plt.ylabel('Price in ₹', fontsize = 16 )
-    plt.xlabel('Date', fontsize = 16 )
-    plt.grid()
-    plt.show()
+ 
