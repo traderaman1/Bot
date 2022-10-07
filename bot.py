@@ -66,8 +66,5 @@ mean()
             stock_df[short_window_col][stock_df['Position'] == 1], 
             '^', markersize = 15, color = 'g', alpha = 0.7, label = 'buy')
     
-      # plot 'sell' signals
-    plt.plot(stock_df[stock_df['Position'] == -1].index, 
-            stock_df[short_window_col][stock_df['Position'] == -1], 
-            'v', markersize = 15, color = 'r', alpha = 0.7, label = 'sell')
+      
  
